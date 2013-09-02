@@ -1,4 +1,9 @@
-velistic-judging
-================
+# Velistic Judging App
 
-Velistic 2013 Judging Application
+## Notice
+
+This application is neither a good example of MVC design nor is particularly well-architected.
+
+There's a bit of logic in the wrong place(M/C overlap), lack of data verification, possible lack of
+integrity and database normalization.
+
