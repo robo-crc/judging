@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <title>CRC Robotics Judging</title>
-    <link rel="shortcut icon" href="http://www.robo-crc.ca/sites/robo-crc.ca/files/danland_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.robo-crc.ca/favicon.ico" type="image/x-icon">
     <meta name="robots" content="noindex,nofollow" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 
@@ -266,7 +266,6 @@
             top: 2px;
             padding: 0 1px;
             font-size: 1.6em;
-            font-size: 1.6em;
         }
 
         .top-buttons div {
@@ -335,11 +334,21 @@
         /*#results table tr th:nth-child(3) {visibility: hidden;}*/
     </style>
 
+    <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', 'UA-44988582-2', 'no-ip.ca');
+	    ga('send', 'pageview');
+    </script>
+
 </head>
 <body>
 <header>
     <h1>
-        Velistic 2013
+        Nemolition 2014
     </h1>
     <div class="top-buttons">
         <div class="help-button">
