@@ -26,6 +26,10 @@
     }
 </style>
 <div id="login-form">
+<!--
+<h1>Judging is over! Thank you for your help.</h1>
+<h1>C'est fini ! On vous remercie le don généreux de votre temps.</h1>
+-->
 <?php
 
     $login_email = array(

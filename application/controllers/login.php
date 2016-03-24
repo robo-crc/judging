@@ -55,7 +55,7 @@ class Login extends CI_Controller {
 	 */
 	public function create($key = null) {
 		if ($key !== "") {
-			// do it
+			// TODO it
 		} else {
 			// Not allowed
 		}

@@ -9,8 +9,7 @@ class Results extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 
-        if ($this->session->userdata('judge_id') == 0 || $this->session->userdata('judge_id') == 1) $this->output->enable_profiler(TRUE);
-        $this->output->enable_profiler(TRUE);
+    //if ($this->session->userdata('judge_id') == 0 || $this->session->userdata('judge_id') == 1) $this->output->enable_profiler(TRUE);
 
 		$this->load->model('main_model');
 		$this->load->library('table');
@@ -30,7 +29,7 @@ class Results extends CI_Controller {
 	}
 
 	public function index() {
-		$this->output->cache(20);
+		//$this->output->cache(20);
 		$this->load->view('results_welcome');
 	}
 

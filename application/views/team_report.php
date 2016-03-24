@@ -3,10 +3,17 @@
     <div id="judge-long">
 
         <section>
-            <header>
+	    <header>
+		<?php if (!isset($cards[0])) { ?>
+		<h1>Not Allowed or Not Judged</h1>
+		<div class="group">
+			<p>Either your team did not submit for this item, or submitted too late to be ranked.</p>
+			<p>Also, make sure you check the link: it must be exactly the same as what we sent, because each link is unique to protect your data.</p>
+		</div>
+		<?php die(); } else { ?>
                 <h1><?= $cards[0]['name'] . " (" . $component . ")" ?> </h1>
 <!--				<h2>Points: --><?//= $points ?><!--</h2>-->
-				<h2>Rank: <?= $rank ?></h2>
+				<!-- <h2>Rank: <?= $rank ?></h2> -->
             </header>
 
             <div class="group">
@@ -45,3 +52,4 @@
     </div>
     </section>
 </div>
+<?php } ?>

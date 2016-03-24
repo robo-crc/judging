@@ -234,10 +234,11 @@ class Main_model extends CI_Model {
 	 */
 	public function get_overall($component = null) {
 		$results = Array();
-		$count = count($this->get_school_list());
+		$count = 31;//count($this->get_school_list());
 
 		for ($i = 1; $i <= $count; $i++) {
 			$this->db->select_sum('overall.score');
+			$this->db->select('schools.name, schools.result_key, schools.contact_name, schools.contact_email');
 			$this->db->select('schools.name');
 			$this->db->where('overall.component', $component);
 			$this->db->where('overall.school_id', $i);

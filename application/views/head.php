@@ -348,7 +348,7 @@
 <body>
 <header>
     <h1>
-        Actimania 2015
+        Pythagorium 2016
     </h1>
     <div class="top-buttons">
         <div class="help-button">

@@ -15,8 +15,8 @@ class Judge extends CI_Controller {
 		// Honour thy ancestors
 		parent::__construct();
 
-		header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-		header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+		header("Cache-Control: no-cache, must-revalidate");
+		header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
 		$this->load->helper('form');
 		$this->load->library('session');
@@ -32,9 +32,6 @@ class Judge extends CI_Controller {
 		if ($this->session->userdata('judge_id') == 0 || $this->session->userdata('judge_id') == 1) {
 			$this->output->enable_profiler(TRUE);
 		}
-
-		//$this->user_data['lang'] = 'en';
-		//$this->user_data['today'] = unix_to_human(time(), FALSE, 'eu');
 
 		$this->data['judge_id'] = $this->session->userdata('judge_id');
 
