@@ -1,14 +1,29 @@
-# Velistic Judging App
+# Robotique CRC Robotics Judging App
 
+# Introduction
 
-## DEPRECATED ##
+The Robotique CRC Robitics competition is about more than just robots: it aims to bring together multisicsiplinary teams of students with diverse interests and talents, ranging from engineering to film to design and writing.
 
-:no_entry_sign: This application was used for Velistic 2013, but will not be used for future competitions. Please find the updated source in the repository.
+In addition to building a robot to play a sport, teams can submit:
+- a video about their team, school and design process
+- a web site about their team, school, and design process
 
-## Notice
+These are judged across three categories: web is judged on technical design (Web award) and writing (Journalism), and the video is judged on its own as a whole.
 
-This application is neither a good example of MVC design nor is particularly well-architected.
+# Judging UX
 
-There's a bit of logic in the wrong place(M/C overlap), lack of data verification, possible lack of
-integrity (it's good enough, but could be better) and database normalization.
+The tool was designed to be extremely simple and intuitive, while keeping in line with our judging philosophy. We believe that judges, who are professionals in their field, know a good or bad submission when they see it. The judging system 
 
+## Use
+
+Here is a webcast explaining how the judging application works, first made in 2013, the design has only changed slightly since http://www.youtube.com/watch?v=B1o5f-Z2hOU
+
+# Contributing
+
+Please feel free to:
+- [fork](https://github.com/robo-crc/judging#fork-destination-box) and send pull requests with improvements, or 
+- [file issues](https://github.com/robo-crc/judging/issues) if you discover any.
+
+# License
+
+This work is released under the [MIT License](https://github.com/robo-crc/judging/blob/master/LICENSE).
