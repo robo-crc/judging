@@ -24,6 +24,8 @@ Please feel free to:
 - [fork](https://github.com/robo-crc/judging#fork-destination-box) and send pull requests with improvements, or 
 - [file issues](https://github.com/robo-crc/judging/issues) if you discover any.
 
+Please observe the [Code of Conduct](https://github.com/robo-crc/judging/blob/master/code_of_conduct.md).
+
 # License
 
 This work is released under the [MIT License](https://github.com/robo-crc/judging/blob/master/LICENSE).
