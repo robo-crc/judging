@@ -2,7 +2,7 @@ title: CRC Judging App
 description: Robotique CRC Robotics Component Judging Application
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-architect
 
 gems:
   - jekyll-mentions
