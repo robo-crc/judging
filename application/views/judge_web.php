@@ -7,7 +7,7 @@ $i = 1;
 <div id="container">
 
     <div id="judge-long">
-        <?= form_open('submit/' . $component, array('id' => $component)); ?>
+        <?= form_open('submit/'.$component, array('id' => $component)); ?>
         <fieldset>
             <legend>School information</legend>
             <a href="<?= $school_url ?>" title="<?= $school_name ?>" target="_blank"><?= $school_name; ?> [<?= $school_url ?>]</a>
@@ -19,22 +19,24 @@ $i = 1;
             <ol>
 	            <li>
 		            <?php
-		            echo form_label(lang($component . '-axis-6'), 'axis-6', array('class' => 'axis-text' ));
-		            echo form_checkbox( array(
-			            'name' => 'axis-6',
-			            'id' => 'axis-6',
-			            'value' => 'tutorial',
-			            'checked' => false,
-		            ));
-		            ?>
+                    echo form_label(lang($component.'-axis-6'), 'axis-6', array('class' => 'axis-text'));
+                    echo form_checkbox(array(
+                        'name' => 'axis-6',
+                        'id' => 'axis-6',
+                        'value' => 'tutorial',
+                        'checked' => false,
+                    ));
+                    ?>
 	            </li>
-                <?php for($i; $i <= 5; $i++) { ?>
+                <?php for ($i; $i <= 5; ++$i) {
+                        ?>
                 <li>
-                    <p class="axis-text"><?= lang($component . '-axis-' . $i) ?></p>
+                    <p class="axis-text"><?= lang($component.'-axis-'.$i) ?></p>
                     <div class="slider" id="axis-<?= $i ?>-slider"></div>
                     <input type="text" value="1" name="axis-<?= $i ?>" id="axis-<?= $i ?>" class="input-hidden" />
                 </li>
-                <?php } ?>
+                <?php 
+                    } ?>
 
             </ol>
         </fieldset>
@@ -44,7 +46,7 @@ $i = 1;
         </fieldset>
         <input type="hidden" name="judge_id" value="<?= $judge_id ?>" />
         <input type="hidden" name="school" value="<?= $school_id ?>" />
-        <?= form_submit("submit", lang('submit')) ?>
+        <?= form_submit('submit', lang('submit')) ?>
         <?= form_close(); ?>
     </div>
 </div>

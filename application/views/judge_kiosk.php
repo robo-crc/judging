@@ -47,7 +47,7 @@
             <textarea class="comment" cols="80" rows="12"></textarea>
         </fieldset>
         <input type="hidden" value="<?= $judge_id ?>" />
-        <?= form_submit("submit", "Submit Critique") ?>
+        <?= form_submit('submit', 'Submit Critique') ?>
         <?= form_close(); ?>
     </div>
 </div>

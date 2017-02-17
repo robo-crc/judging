@@ -7,10 +7,15 @@ $i = 1;
 <div id="container">
 
     <div id="judge-long">
-        <?= form_open('submit/' . $component, array('id' => $component)); ?>
+        <?= form_open('submit/'.$component, array('id' => $component)); ?>
         <fieldset>
-            <legend>School information</legend>
+	    <legend>School information</legend>
             <a href="<?= $school_url ?>" title="<?= $school_name ?>" target="_blank"><?= $school_name; ?> [<?= $school_url ?>]</a>
+	    <?php if ($component == 'video') {
+    ?>
+	    <p>Please note that some schools use subtitles for translation. <a href="https://support.google.com/youtube/answer/100078?hl=en" target="_blank">Please enable [CC] on the video if you are unsure</a>.</p>
+            <?php 
+} ?>
         </fieldset>
 
 
@@ -20,24 +25,26 @@ $i = 1;
             <ol>
                 <li>
                     <?php
-                        echo form_label(lang($component . '-axis-' . $i), 'axis-' . $i, array('class' => 'axis-text' ));
-                        echo form_checkbox( array(
-                            'name' => 'axis-' . $i,
-                            'id' => 'axis-' . $i,
+                        echo form_label(lang($component.'-axis-'.$i), 'axis-'.$i, array('class' => 'axis-text'));
+                        echo form_checkbox(array(
+                            'name' => 'axis-'.$i,
+                            'id' => 'axis-'.$i,
                             'value' => 'bilingual',
                             'checked' => true,
                         ));
-                       $i++;
+                       ++$i;
                     ?>
                 </li>
 
-                <?php for($i; $i <= 7; $i++) { ?>
+                <?php for ($i; $i <= 7; ++$i) {
+                        ?>
                 <li>
-                    <p class="axis-text"><?= lang($component . '-axis-' . $i) ?></p>
+                    <p class="axis-text"><?= lang($component.'-axis-'.$i) ?></p>
                     <div class="slider" id="axis-<?= $i ?>-slider"></div>
                     <input type="text" value="1" name="axis-<?= $i ?>" id="axis-<?= $i ?>" class="input-hidden" />
                 </li>
-                <?php } ?>
+                <?php 
+                    } ?>
 
             </ol>
         </fieldset>
@@ -47,7 +54,7 @@ $i = 1;
         </fieldset>
         <input type="hidden" name="judge_id" value="<?= $judge_id ?>" />
         <input type="hidden" name="school" value="<?= $school_id ?>" />
-        <?= form_submit("submit", lang('submit')) ?>
+        <?= form_submit('submit', lang('submit')) ?>
         <?= form_close(); ?>
     </div>
 </div>
