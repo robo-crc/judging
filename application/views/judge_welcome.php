@@ -12,7 +12,8 @@
             </span>
             <span class="huge">»</span>
             <span class="welcome-right-container">
-                <a href="<?= base_url().'judge/web/overall'; ?>" class="big-button"><?= lang('proceed-to-overall').' '.lang('page-header-web').' '.lang('overall'); ?></a>
+                <a href="<?= base_url() . "judge/web/overall"; ?>"
+                   class="big-button"><?= lang('proceed-to-overall') . " " . lang('page-header-web') . " " . lang('overall'); ?></a>
             </span>
             </fieldset>
         <?= form_close(); ?>
@@ -27,7 +28,8 @@
             </span>
             <span class="huge">»</span>
             <span class="welcome-right-container">
-                <a href="<?= base_url().'judge/journalism/overall'; ?>" class="big-button"><?= lang('proceed-to-overall').' '.lang('page-header-journalism').' '.lang('overall'); ?></a>
+                <a href="<?= base_url() . "judge/journalism/overall"; ?>"
+                   class="big-button"><?= lang('proceed-to-overall') . " " . lang('page-header-journalism') . " " . lang('overall'); ?></a>
             </span>
         </fieldset>
         <?= form_close(); ?>
@@ -42,7 +44,8 @@
             </span>
             <span class="huge">»</span>
             <span class="welcome-right-container">
-                <a href="<?= base_url().'judge/video/overall'; ?>" class="big-button"><?= lang('proceed-to-overall').' '.lang('page-header-video').' '.lang('overall'); ?></a>
+                <a href="<?= base_url() . "judge/video/overall"; ?>"
+                   class="big-button"><?= lang('proceed-to-overall') . " " . lang('page-header-video') . " " . lang('overall'); ?></a>
             </span>
         </fieldset>
         <?= form_close(); ?>
@@ -52,15 +55,15 @@
         <fieldset>
             <legend><?= lang('page-header-overall'); ?></legend>
             <span class="welcome-left-container">
-                <a href="<?= base_url().'judge/kiosk/overall'; ?>" class="big-button"><?= lang('proceed-to-overall').' '.lang('page-header-kiosk').' '.lang('overall'); ?></a>
+                <a href="<?= base_url() . "judge/kiosk/overall"; ?>" class="big-button"><?= lang('proceed-to-overall') . " " . lang('page-header-kiosk') . " " . lang('overall'); ?></a>
             </span>
 
             <span class="welcome-left-container">
-                <a href="<?= base_url().'judge/build/overall'; ?>" class="big-button"><?= lang('proceed-to-overall').' '.lang('page-header-build').' '.lang('overall'); ?></a>
+                <a href="<?= base_url() . "judge/build/overall"; ?>" class="big-button"><?= lang('proceed-to-overall') . " " . lang('page-header-build') . " " . lang('overall'); ?></a>
             </span >
 
             <span class="welcome-left-container">
-                <a href="<?= base_url().'judge/design/overall'; ?>" class="big-button"><?= lang('proceed-to-overall').' '.lang('page-header-design').' '.lang('overall'); ?></a>
+                <a href="<?= base_url() . "judge/design/overall"; ?>" class="big-button"><?= lang('proceed-to-overall') . " " . lang('page-header-design') . " " . lang('overall'); ?></a>
             </span>
         </fieldset>
 -->

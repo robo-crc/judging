@@ -1,5 +1,11 @@
 # Robotique CRC Robotics Judging App
 
+# Retired
+
+Please note that this project has run its course and has been retired from active use by the CRC. As such, it will no longer be maintained, and pull requests will no longer be accepted.
+
+It's also quite outdated, using newly-emergent patterns for PHP5 in 2013. Since then, a lot has changed, and this project has not kept up. It probably shouldn't be used as a model for current best practices.
+
 # Quickstart
 
 - Create the database schema with `scaffold.sql`

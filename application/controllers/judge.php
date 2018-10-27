@@ -1,6 +1,4 @@
-<?php
-
-if (!defined('BASEPATH')) {
+<?php if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
@@ -8,9 +6,9 @@ if (!defined('BASEPATH')) {
  * TODO Add link to video and web in overall rank page.
  *
  */
-
 class Judge extends CI_Controller
 {
+
     protected $data = array();
 
     public function __construct()
@@ -18,8 +16,8 @@ class Judge extends CI_Controller
         // Honour thy ancestors
         parent::__construct();
 
-        header('Cache-Control: no-cache, must-revalidate'); // HTTP/1.1
-        header('Expires: Sat, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+        header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+        header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
         $this->load->helper('form');
         $this->load->library('session');
@@ -33,7 +31,7 @@ class Judge extends CI_Controller
 
         // Enable profiling during development
         if ($this->session->userdata('judge_id') == 0 || $this->session->userdata('judge_id') == 1) {
-            $this->output->enable_profiler(true);
+            $this->output->enable_profiler(TRUE);
         }
 
         //$this->user_data['lang'] = 'en';
@@ -42,13 +40,15 @@ class Judge extends CI_Controller
         $this->data['judge_id'] = $this->session->userdata('judge_id');
 
         switch ($this->session->userdata('lang')) {
-            case 'en':
+            case "en":
                 $this->lang->load('strings', 'english');
                 break;
-            case 'fr':
+            case "fr":
                 $this->lang->load('strings', 'francais');
                 break;
         }
+
+
     }
 
     public function __destruct()
@@ -76,7 +76,7 @@ class Judge extends CI_Controller
      */
     public function web($overall = null)
     {
-        $this->data['component'] = 'web';
+        $this->data['component'] = "web";
 
         $this->load->view('head', $this->data);
 
@@ -90,6 +90,7 @@ class Judge extends CI_Controller
             } else {
                 $this->load->view('judge_web', $this->data);
             }
+
         } else {
             $this->data['rubric_matrix'] = $this->main_model->get_rubric_matrix($this->data['component'], $this->data['judge_id']);
             $this->data['missing'] = $this->main_model->get_missing_rubric($this->data['component'], $this->data['judge_id']);
@@ -105,7 +106,7 @@ class Judge extends CI_Controller
      */
     public function journalism($overall = null)
     {
-        $this->data['component'] = 'journalism';
+        $this->data['component'] = "journalism";
 
         $this->load->view('head', $this->data);
 
@@ -119,6 +120,7 @@ class Judge extends CI_Controller
             } else {
                 $this->load->view('judge_component', $this->data);
             }
+
         } else {
             $this->data['rubric_matrix'] = $this->main_model->get_rubric_matrix($this->data['component'], $this->data['judge_id']);
             $this->data['missing'] = $this->main_model->get_missing_rubric($this->data['component'], $this->data['judge_id']);
@@ -134,7 +136,7 @@ class Judge extends CI_Controller
      */
     public function video($overall = null)
     {
-        $this->data['component'] = 'video';
+        $this->data['component'] = "video";
 
         $this->load->view('head', $this->data);
 
@@ -148,6 +150,7 @@ class Judge extends CI_Controller
             } else {
                 $this->load->view('judge_component', $this->data);
             }
+
         } else {
             $this->data['rubric_matrix'] = $this->main_model->get_rubric_matrix($this->data['component'], $this->data['judge_id']);
             $this->data['missing'] = $this->main_model->get_missing_rubric($this->data['component'], $this->data['judge_id']);
@@ -165,7 +168,7 @@ class Judge extends CI_Controller
         $this->data['school_list'] = $this->main_model->get_school_list();
 
         $this->load->helper('html');
-        $this->data['component'] = 'kiosk';
+        $this->data['component'] = "kiosk";
         $this->load->view('head', $this->data);
 
         $this->load->view('judge_rank', $this->data);
@@ -179,7 +182,7 @@ class Judge extends CI_Controller
     {
         $this->data['school_list'] = $this->main_model->get_school_list();
 
-        $this->data['component'] = 'design';
+        $this->data['component'] = "design";
         $this->load->view('head', $this->data);
         $this->load->view('judge_rank', $this->data);
         $this->load->view('foot');
@@ -192,9 +195,10 @@ class Judge extends CI_Controller
     {
         $this->data['school_list'] = $this->main_model->get_school_list();
 
-        $this->data['component'] = 'build';
+        $this->data['component'] = "build";
         $this->load->view('head', $this->data);
         $this->load->view('judge_rank', $this->data);
         $this->load->view('foot');
     }
+
 }

@@ -1,19 +1,18 @@
-<?php
-
-if (!defined('BASEPATH')) {
+<?php if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
 class Submit extends CI_Controller
 {
-    protected $data = array();
+
+    protected $data = Array();
 
     public function __construct()
     {
         parent::__construct();
 
         if ($this->session->userdata('judge_id') == 0 || $this->session->userdata('judge_id') == 1) {
-            $this->output->enable_profiler(true);
+            $this->output->enable_profiler(TRUE);
         }
 
         $this->load->model('main_model');
@@ -21,10 +20,10 @@ class Submit extends CI_Controller
         // Set session data
         $this->data['judge_id'] = $this->session->userdata('judge_id');
         switch ($this->session->userdata('lang')) {
-            case 'en':
+            case "en":
                 $this->lang->load('strings', 'english');
                 break;
-            case 'fr':
+            case "fr":
                 $this->lang->load('strings', 'francais');
                 break;
         }
@@ -43,6 +42,7 @@ class Submit extends CI_Controller
      */
     public function overall($component = null)
     {
+
         $this->data['component'] = $component;
         $this->load->view('head', $this->data);
 
@@ -68,7 +68,7 @@ class Submit extends CI_Controller
 
     public function web()
     {
-        $this->data['component'] = 'Web';
+        $this->data['component'] = "Web";
         $this->load->view('head', $this->data);
 
         if ($this->main_model->put_web_rubric($this->input->post())) {

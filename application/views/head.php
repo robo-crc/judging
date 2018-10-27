@@ -348,18 +348,16 @@
 <body>
 <header>
     <h1>
-        Loops 2017
+        Converto 2018
     </h1>
     <div class="top-buttons">
         <div class="help-button">
-            <a href="mailto:person@example.com?subject=Judging%20help!"><?= lang('help-menu'); ?></a>
+            <a href="mailto:NOREPLY@robo-crc.ca?subject=Judging%20help!"><?= lang('help-menu'); ?></a>
         </div>
-        <?php if ($this->session->userdata('validated')) {
-    ?>
+        <?php if ($this->session->userdata('validated')) { ?>
         <div class="logout-button">
             <a href="<?= base_url(); ?>login/logout"><?= lang('logout-menu'); ?></a>
         </div>
-        <?php 
-}?>
+        <?php }; ?>
     </div>
 </header>
