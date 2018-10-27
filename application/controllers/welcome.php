@@ -1,11 +1,10 @@
-<?php
-
-if (!defined('BASEPATH')) {
+<?php if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
 class Welcome extends CI_Controller
 {
+
     public function index()
     {
         $this->load->helper('html');
@@ -14,7 +13,7 @@ class Welcome extends CI_Controller
         $this->lang->load('strings', 'english');
         //$this->lang->load('strings', 'french');
 
-        $data['component'] = 'Main';
+        $data['component'] = "Main";
         $this->load->view('head', $data);
         $this->load->view('welcome_message');
         $this->load->view('foot');

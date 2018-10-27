@@ -1,14 +1,13 @@
-<?php
-
-if (!defined('BASEPATH')) {
+<?php if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
 /**
- *  Controls logging in and out.
+ *  Controls logging in and out
  */
 class Login extends CI_Controller
 {
+
     public function __construct()
     {
         // Enable profiling in this contoller's constructor
@@ -20,14 +19,15 @@ class Login extends CI_Controller
         $this->load->library('session');
         $this->load->model('main_model');
         $this->load->model('login_model');
+
     }
 
     /**
-     *    Show the login form.
+     *    Show the login form
      */
     public function index()
     {
-        $data['component'] = '';
+        $data['component'] = "";
         $this->load->view('head', $data);
         $this->load->view('login_form');
         $this->load->view('foot');
@@ -51,7 +51,7 @@ class Login extends CI_Controller
     public function logout()
     {
         $this->login_model->logout();
-        redirect('/');
+        redirect("/");
     }
 
     /***
@@ -60,10 +60,11 @@ class Login extends CI_Controller
      */
     public function create($key = null)
     {
-        if ($key !== '') {
+        if ($key !== "") {
             // do it
         } else {
             // Not allowed
         }
     }
+
 }

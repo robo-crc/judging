@@ -33,26 +33,26 @@
 <?php
 
     $login_email = array(
-        'id' => 'login_email',
-        'name' => 'login_email',
-        'placeholder' => 'you@email.com',
+        'id' => "login_email",
+        'name' => "login_email",
+        'placeholder' => "you@email.com",
     );
 
     $login_pin = array(
-        'id' => 'login_pin',
-        'name' => 'login_pin',
-        'placeholder' => '1234',
+        'id' => "login_pin",
+        'name' => "login_pin",
+        'placeholder' => "1234",
     );
 
-    echo form_open('/login/authenticate');
+echo form_open("/login/authenticate");
     echo form_fieldset('Log in');
-    echo form_label('Email', $login_email['name']);
+echo form_label("Email", $login_email['name']);
     echo form_input($login_email);
-    echo '<br />';
-    echo form_label('PIN', $login_pin['name']);
+echo "<br />";
+echo form_label("PIN", $login_pin['name']);
     echo form_input($login_pin);
 
-    echo form_submit('Login', 'Login');
+echo form_submit("Login", "Login");
     echo form_fieldset_close();
     echo form_close();
 ?>
